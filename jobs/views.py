@@ -15,6 +15,7 @@ class JobViewSet(viewsets.ModelViewSet):
 
     def list(self, request):
         try:
+            print("Hi")
             job_queryset = self.model.objects.all()
             job_serializer = self.serializer_class(job_queryset, many=True)
             response = {
