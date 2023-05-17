@@ -20,6 +20,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     def list(self, request):
         try:
+            print('Hello')
             user_queryset = self.model.objects.all()
             user_serializer = self.list_serializer_class(user_queryset, many=True)
             response = {
